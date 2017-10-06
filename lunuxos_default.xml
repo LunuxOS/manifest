@@ -4,6 +4,10 @@
   <remote  name="github"
            fetch="https://github.com" />
 
+  <remote  name="lunuxos"
+           revision="8.0"
+           fetch="https://github.com/LunuxOS" />
+
   <remote  name="gzosp"
            fetch="https://github.com/GZOSP" />
 
@@ -14,7 +18,7 @@
            sync-j="8" />
 
   <!-- GZOSP -->
-  <project path="manifest" name="manifest" remote="gzosp" />
+  <project path="manifest" name="manifest" remote="lunuxos" />
   <project path="build/make" name="build" remote="gzosp" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -62,7 +66,7 @@
   <project path="packages/apps/Camera2" name="packages_apps_Camera2" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Gallery2" name="packages_apps_Gallery2" groups="pdk-fs" remote="gzosp" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="gzosp" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="lunuxos" />
   <project path="packages/inputmethods/LatinIME" name="packages_inputmethods_LatinIME" groups="pdk-fs" remote="gzosp" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="gzosp" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="gzosp" />
@@ -74,6 +78,6 @@
   <project path="system/nfc" name="system_nfc" groups="pdk" remote="gzosp" />
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="gzosp" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="gzosp" />
-  <project path="vendor/gzosp" name="vendor_gzosp" remote="gzosp" />
+  <project path="vendor/lunuxos" name="vendor_lunuxos" remote="lunuxos" />
 
 </manifest>
